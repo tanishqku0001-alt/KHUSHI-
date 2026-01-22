@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Khushi, Will You Be My Valentine? 💖</title>
+
+<style>
+body {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 550px;
+  margin: auto;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #ff4d6d;
+}
+
+.cat {
+  font-size: 70px;
+}
+
+img {
+  width: 250px;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+.buttons {
+  margin-top: 25px;
+  position: relative;
+  height: 120px;
+}
+
+button {
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+  left: 50%;
+  transform: translateX(-110%);
+}
+
+#noBtn {
+  background: #ccc;
+  left: 50%;
+  transform: translateX(10%);
+}
+
+#message {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="cat">🐱💖🐱</div>
+
+  <h1>Khushi, Will You Be My Valentine? 💘</h1>
+
+  <p>
+    Roses are red 🌹<br>
+    Cats say meow 🐾<br>
+    My heart belongs to you 💓<br>
+    And everyone knows it now, Khushi 😽
+  </p>
+
+  <!-- CAT MEMES -->
+  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute Cat">
+  <img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif" alt="Love Cat">
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="yesClicked()">YES 🤍</button>
+    <button id="noBtn" onmouseover="moveNo()">NO 🙀</button>
+  </div>
+
+  <div id="message"></div>
+</div>
+
+<script>
+function moveNo() {
+  const noBtn = document.getElementById("noBtn");
+  const x = Math.random() * 300 - 150;
+  const y = Math.random() * 80;
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+function yesClicked() {
+  document.querySelector(".card").innerHTML = `
+    <h1>YAYYYY 😻💖</h1>
+    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+    <p style="font-size:22px; color:#ff4d6d;">
+      Khushi, you just made me the happiest person alive 🥹💘<br><br>
+      I promise you endless laughs, annoying love,<br>
+      and unconditional care 🐾💕<br><br>
+      Happy Valentine’s Day ❤️<br><br>
+      — Yours, <b>Tanishqk</b> 😽
+    </p>
+  `;
+}
+</script>
+
+</body>
+</html>
